@@ -10,74 +10,94 @@
 </head>
 
 <body>
-    <h1 id="greeting">IceCream</h1>
-
-
-    <div class="container border">
-        <div class="form-check">
-            <label for="number1Field">Number of scoops:</label>
-            <input type="number" id="number1Field">
-            <br>
-                <!------this is for the cone---------->
-           
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Cone
-                    </label>
-                  </div>
-           
-           
-           <!----this is if the cone had a collapse dropdown
-                 <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
-                    value="option1" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false"
-                    aria-controls="collapseExample1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                    cone
-                </label>
-            </div>
-                
-                <div class="collapse" id="collapseExample1">
-                <div class="card card-body">
-
-                    <p>hello</p>
+   
+    <h1>The one in class</h1>
+    <main class="container">
+        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <div class="row">
+                <div class="col">
+                    <label for="numberOfScoops" class="form-label fs-6">Total Scoops (between 1 and 4)</label>
 
                 </div>
-            </div>------>
 
-            <!-------------this is for the cup ------->
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadiodefault2"
-                    value="" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false"
-                    aria-controls="collapseExample2">
-                <label class="form-check-label" for="flexRadioDefault2">
-                    cup
-                </label>
-            </div>
-            <div class="collapse" id="collapseExample2">
-                <div class="card card-body">
-                    choose your toppings <!---body for collape here-->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Default checkbox
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                        <label class="form-check-label" for="flexCheckChecked">
-                            Checked checkbox
-                        </label>
-                    </div>
-                    <!---body collape ends here-->
-
-
+                <div class="col">
+                    <input type="number" class="form-control form-control-sm" id="numberOfScoops" min="1" max="4">
                 </div>
             </div>
+            <!--Start radio buttons-->
+            <div class="row mb-1 mb-5 mt-5 text-center">
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="icecreamType" id="coneChoice">
+                        <label class="form-check-label" for="coneChoice">
+                            Cone
+                        </label>
+                    </div>
+                    <div class="form-check-inline form-check-inline">
+                        <input class="form-check-input" type="radio" name="icecreamType" id="cupChoice">
+                        <label class="form-check-label" for="cupChoice">
+                            Cup
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!---End radio buttons-->
 
-        </div>
-    </div>
+
+            <!--Toppings-->
+            <div id="toppingsrow" class="row">
+                <div class="col">
+                    <h3>Toppings</h3>
+                    <div class="row mb-1">
+                        <div class="border border-black margin-top">
+                            <div class="col">
+                                <input id="topping-sprinkles" type="checkbox">
+                                <label for="topping-sprinkles"> Sprinkles ($.50)</label><br>
+
+                                <input id="topping-hotfudge" type="checkbox">
+                                <label for="topping-hotfudge"> Hot Fudge ($1.25)</label>
+                            </div>
+                            <div class="col">
+                                <input id="topping-whipped" type="checkbox">
+                                <label for="topping-whipped"> Whipped Cream ($.25)</label><br>
+
+                                <input id="topping-cherry" type="checkbox">
+                                <label for="topping-cherry"> Cherry ($0.25)</label>
+                            </div>                        
+                        </div>
+
+                    </div>                    
+                </div>
+
+            </div> <!--END of toppings-->
+
+
+            <div class="row mb-1">
+                <div class="col">
+                    <button id="button" type="button" class="btn btn-primary">Submit Order</button>
+                </div>
+            </div>
+            <div class="row mb-1">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="base-price">Base Price: $</label>
+                        <span id="base-price" class="value">xx.xx</span>                        
+                    </div>
+                    <div class="form-group">
+                        <label for="toppings-amount">Toppings: $</label>
+                        <span id="toppings-amount" class="value">xx.xx</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="total-due">Total Due :$</label>
+                        <span id="total-amount" class="value">xx.xx</span>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </main>
+
+
 
 
 
